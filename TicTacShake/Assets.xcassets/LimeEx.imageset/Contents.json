@@ -2,14 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "LimeEx68.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "LimeEx136.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "LimeEx204.png",
       "scale" : "3x"
     }
   ],
