@@ -198,6 +198,8 @@
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.95148438219999998" green="0.83461928370000005" blue="0.22671288249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
+                                                    <constraint firstItem="y0N-Dv-v7I" firstAttribute="leading" secondItem="SBJ-gI-J4K" secondAttribute="leading" constant="9.5" id="Ja8-wi-j1L"/>
+                                                    <constraint firstAttribute="trailing" secondItem="y0N-Dv-v7I" secondAttribute="trailing" constant="9.5" id="LAo-CG-6vF"/>
                                                     <constraint firstAttribute="bottom" secondItem="y0N-Dv-v7I" secondAttribute="bottom" constant="20" id="O1g-JL-Lao"/>
                                                     <constraint firstItem="y0N-Dv-v7I" firstAttribute="centerX" secondItem="SBJ-gI-J4K" secondAttribute="centerX" id="d8r-kR-5Hr"/>
                                                 </constraints>
