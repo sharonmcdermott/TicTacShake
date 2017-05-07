@@ -9,11 +9,41 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    
+    @IBOutlet weak var PlayerName: UITextField!
+    
+    @IBOutlet weak var OpponentName: UITextField!
+    
+    
+    
+    
+    @IBOutlet weak var ScoreLabel: UILabel!
+    
+    @IBOutlet weak var PlayAgainButton: UIButton!
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+    
+    //Close iOS Keyboard by touching anywhere using Swift
+
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        // Do any additional setup after loading the view, typically from a nib.
     }
+    func dismissKeyboard() {
+        //Causes the view (or one of it's embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
