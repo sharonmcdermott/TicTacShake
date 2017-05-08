@@ -9,13 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
+ 
+    
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if event?.subtype == UIEventSubtype.motionShake {
+            print ("SHAKE")
+        }
+    }
     
     
     
     @IBOutlet weak var PlayerName: UITextField!
     
     @IBOutlet weak var OpponentName: UITextField!
-    
     
     
     
