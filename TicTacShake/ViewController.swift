@@ -60,12 +60,17 @@ class ViewController: UIViewController {
     }
 
     func createAlert (title:String, message:String) {
-//        let alert = UIAlertController(nibName: title, bundle: message)
-//        alert.addAction(title: "OK", handler: {
-//            (action) in alert.dismiss(animated: true, completion: nil)
-        }
-    }
-//}
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        // Creating One Button
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+            alert.present(alert, animated: true, completion: nil)
+}
+
+
 
 
 
@@ -137,8 +142,4 @@ print(player)
 
 
 
-
-
-
-
-
+}

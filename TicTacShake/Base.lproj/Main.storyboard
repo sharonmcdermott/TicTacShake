@@ -40,12 +40,19 @@
                                                         <color key="textColor" red="1" green="0.57457399369999995" blue="0.0019781978339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S34-Yp-8hc">
+                                                        <rect key="frame" x="322" y="36" width="50" height="67"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                                        <state key="normal" title="ℹ️"/>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="pYh-hj-nV0" firstAttribute="leading" secondItem="dex-0q-ZyD" secondAttribute="leading" constant="8" id="4on-e1-QNj"/>
                                                     <constraint firstAttribute="trailing" secondItem="pYh-hj-nV0" secondAttribute="trailing" priority="750" constant="8" id="J31-Y9-E8b"/>
                                                     <constraint firstItem="pYh-hj-nV0" firstAttribute="top" secondItem="dex-0q-ZyD" secondAttribute="top" priority="750" constant="40" id="WSn-21-lEz"/>
+                                                    <constraint firstAttribute="trailing" secondItem="S34-Yp-8hc" secondAttribute="trailing" constant="3" id="cKR-b9-00n"/>
+                                                    <constraint firstAttribute="bottom" secondItem="S34-Yp-8hc" secondAttribute="bottom" constant="3" id="so8-1T-b9d"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RMI-x9-Ig6">
