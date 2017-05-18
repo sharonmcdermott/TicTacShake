@@ -75,15 +75,6 @@ class ViewController: UIViewController {
 
 
 
-
-
-
-
-
-
-
-
-
 // How do I use the Minimax Algorithm in my game to pick the game piece placement for the opponent? (shaken game piece placement.)
 
 
@@ -95,49 +86,7 @@ class ViewController: UIViewController {
 
 // How do I define the board?
 
-/*
-protocol Player {
-    func takeTurn(/* on board: Board */)
-}
-// you'll need to define the board once you get the individual places for the pieces added
 
- var PlayerOneName
-
-struct HumanPlayer: Player {
-    var playerNameOne: String
-    var score: Int
-    func takeTurn(/* on board: Board */) { /* Show move UI and wait */ }
-    }
-
-
-struct ComputerPlayer: Player {
-    func takeTurn(/* on board: Board */) { /*Pick the best legal move using AI */}
-}
-
-
-let player = HumanPlayer(PlayerOneName: "", score: 0)
-//print(player)
-
-*/
-
-/*
-
-protocol CustomStringConvertible {
-    var description: String { get }
-}
-
-struct HumanPlayer: Player {...}
-
-extension HumanPlayer: CustomStringConvertible {
-    var description: String {
-        return "Human player \(name) has a score of \(score)"
-    }
-}
-
-
-let player = HumanPlayer(name: "", score: 0)
-print(player)
-*/
 
 
 
