@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -44,6 +45,10 @@
                                                         <rect key="frame" x="322" y="36" width="50" height="67"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="46"/>
                                                         <state key="normal" title="ℹ️"/>
+                                                        <connections>
+                                                            <action selector="goToGameInstructions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BBj-Yl-VmQ"/>
+                                                            <segue destination="zRa-s9-8Ml" kind="presentation" id="qUs-Qg-FEy"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -348,6 +353,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="112.8" y="122.78860569715144"/>
+        </scene>
+        <!--Instructions View Controller-->
+        <scene sceneID="s8O-Lx-K2x">
+            <objects>
+                <viewController storyboardIdentifier="InstructionsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zRa-s9-8Ml" customClass="InstructionsViewController" customModule="TicTacShake" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AI3-gy-WvE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xyy-vg-7KN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pwc-kH-2pG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZS-XT-mrU" userLabel="closeButton">
+                                <rect key="frame" x="87.5" y="553" width="200" height="46"/>
+                                <color key="backgroundColor" red="1" green="0.57457399369999995" blue="0.0019781978339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="hjG-LG-xt3"/>
+                                    <constraint firstAttribute="height" constant="46" id="ieF-VY-r4k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="GoP-jM-AVf"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="qM4-43-HNS">
+                                <rect key="frame" x="16" y="40" width="343" height="587"/>
+                                <color key="backgroundColor" red="0.47450980539999998" green="0.8392156959" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9ZS-XT-mrU" firstAttribute="top" secondItem="AI3-gy-WvE" secondAttribute="bottom" constant="533" id="2qf-aR-aHC"/>
+                            <constraint firstItem="Xyy-vg-7KN" firstAttribute="top" secondItem="9ZS-XT-mrU" secondAttribute="bottom" constant="68" id="Vfg-Oz-Omv"/>
+                            <constraint firstItem="qM4-43-HNS" firstAttribute="centerX" secondItem="9ZS-XT-mrU" secondAttribute="centerX" id="lMs-FV-1FC"/>
+                            <constraint firstItem="qM4-43-HNS" firstAttribute="centerY" secondItem="Pwc-kH-2pG" secondAttribute="centerY" id="nup-Ap-ee2"/>
+                            <constraint firstItem="qM4-43-HNS" firstAttribute="top" secondItem="AI3-gy-WvE" secondAttribute="bottom" constant="20" id="odu-Ic-JFq"/>
+                            <constraint firstItem="qM4-43-HNS" firstAttribute="centerX" secondItem="Pwc-kH-2pG" secondAttribute="centerX" id="tYr-ZG-oLy"/>
+                            <constraint firstItem="qM4-43-HNS" firstAttribute="leading" secondItem="Pwc-kH-2pG" secondAttribute="leadingMargin" id="za4-xf-VeH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="InstructionTextScrollView" destination="qM4-43-HNS" id="8nj-bW-FO4"/>
+                        <outlet property="closeButton" destination="9ZS-XT-mrU" id="8Fq-Y4-vI0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HtI-l3-2Ri" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000.8" y="122.78860569715144"/>
         </scene>
     </scenes>
     <resources>

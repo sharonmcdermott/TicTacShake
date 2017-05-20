@@ -12,7 +12,7 @@
 		805B83A21E92DD9C0038F454 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 805B83A01E92DD9C0038F454 /* Main.storyboard */; };
 		805B83A51E92DD9C0038F454 /* TicTacShake.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 805B83A31E92DD9C0038F454 /* TicTacShake.xcdatamodeld */; };
 		805B83A71E92DD9C0038F454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 805B83A61E92DD9C0038F454 /* Assets.xcassets */; };
-		805B83AA1E92DD9C0038F454 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 805B83A81E92DD9C0038F454 /* LaunchScreen.storyboard */; };
+		8075BA8B1ED0A9F400541E03 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8075BA8A1ED0A9F400541E03 /* InstructionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +22,8 @@
 		805B83A11E92DD9C0038F454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		805B83A41E92DD9C0038F454 /* TicTacShake.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TicTacShake.xcdatamodel; sourceTree = "<group>"; };
 		805B83A61E92DD9C0038F454 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		805B83A91E92DD9C0038F454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		805B83AB1E92DD9C0038F454 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8075BA8A1ED0A9F400541E03 /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +59,8 @@
 				805B839C1E92DD9C0038F454 /* AppDelegate.swift */,
 				805B839E1E92DD9C0038F454 /* ViewController.swift */,
 				805B83A01E92DD9C0038F454 /* Main.storyboard */,
+				8075BA8A1ED0A9F400541E03 /* InstructionsViewController.swift */,
 				805B83A61E92DD9C0038F454 /* Assets.xcassets */,
-				805B83A81E92DD9C0038F454 /* LaunchScreen.storyboard */,
 				805B83AB1E92DD9C0038F454 /* Info.plist */,
 				805B83A31E92DD9C0038F454 /* TicTacShake.xcdatamodeld */,
 			);
@@ -127,7 +127,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				805B83AA1E92DD9C0038F454 /* LaunchScreen.storyboard in Resources */,
 				805B83A71E92DD9C0038F454 /* Assets.xcassets in Resources */,
 				805B83A21E92DD9C0038F454 /* Main.storyboard in Resources */,
 			);
@@ -142,6 +141,7 @@
 			files = (
 				805B839F1E92DD9C0038F454 /* ViewController.swift in Sources */,
 				805B839D1E92DD9C0038F454 /* AppDelegate.swift in Sources */,
+				8075BA8B1ED0A9F400541E03 /* InstructionsViewController.swift in Sources */,
 				805B83A51E92DD9C0038F454 /* TicTacShake.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,14 +155,6 @@
 				805B83A11E92DD9C0038F454 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		805B83A81E92DD9C0038F454 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				805B83A91E92DD9C0038F454 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -306,6 +298,7 @@
 				805B83B01E92DD9C0038F454 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

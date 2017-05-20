@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func goToGameInstructions(_ sender: Any) {
+        
+    }
     
     @IBOutlet weak var PlayerName: UITextField!
     
@@ -49,6 +52,13 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
 
+
+
+
+    
+}
+
+        /*
     
     override func viewDidAppear(_ animated: Bool) {
         createAlert(title: "How to Play", message: "Click to place your game piece. Shake device to place your opponents game piece.")
@@ -58,6 +68,8 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    
 
     func createAlert (title:String, message:String) {
         
@@ -70,7 +82,7 @@ class ViewController: UIViewController {
             alert.present(alert, animated: true, completion: nil)
 }
 
-
+ /*
 
 
 
@@ -90,5 +102,4 @@ class ViewController: UIViewController {
 
 
 
-
-}
+*/*/
