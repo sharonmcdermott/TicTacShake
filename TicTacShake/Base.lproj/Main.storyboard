@@ -366,35 +366,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZS-XT-mrU" userLabel="closeButton">
-                                <rect key="frame" x="87.5" y="553" width="200" height="46"/>
-                                <color key="backgroundColor" red="1" green="0.57457399369999995" blue="0.0019781978339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="hjG-LG-xt3"/>
-                                    <constraint firstAttribute="height" constant="46" id="ieF-VY-r4k"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                <state key="normal" title="Close">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="GoP-jM-AVf"/>
-                                </connections>
-                            </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="qM4-43-HNS">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="qM4-43-HNS" customClass="UITableView">
                                 <rect key="frame" x="16" y="40" width="343" height="587"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="18" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k76-PK-2IR">
+                                        <rect key="frame" x="8" y="8" width="327" height="425"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">How to play Tic Tac Shake:
+
+This is a single player game. You are the “X”. Your opponent is ”O”.  Type in your name and the name of your opponent.  Your opponent could even have a name made up of emojis.
+To start playing, click on the space on the game board where your would like your first “X”.  To place your opponents piece, which is “O”, shake the device.  Placement location will be selected by the device and the “O” game piece will be placed once your device has been shook. Continue until X Wins, O wins or there is a draw. To start a new game, click “Restart”
+Enjoy and Have Fun!</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.27059" green="0.27059" blue="0.27059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                        <tabStops/>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZS-XT-mrU" userLabel="closeButton">
+                                        <rect key="frame" x="96" y="441" width="150" height="46"/>
+                                        <color key="backgroundColor" red="1" green="0.57457399369999995" blue="0.0019781978339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="RKW-ea-dlI"/>
+                                            <constraint firstAttribute="width" constant="150" id="nTN-L8-qhK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <state key="normal" title="Close">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="GoP-jM-AVf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.47450980539999998" green="0.8392156959" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="9ZS-XT-mrU" firstAttribute="centerX" secondItem="qM4-43-HNS" secondAttribute="centerX" id="Oub-Ux-Lnw"/>
+                                    <constraint firstItem="9ZS-XT-mrU" firstAttribute="top" secondItem="qM4-43-HNS" secondAttribute="top" constant="441" id="R21-bg-mCO"/>
+                                    <constraint firstItem="k76-PK-2IR" firstAttribute="top" secondItem="qM4-43-HNS" secondAttribute="topMargin" id="SYF-Yg-56z"/>
+                                    <constraint firstItem="9ZS-XT-mrU" firstAttribute="top" secondItem="k76-PK-2IR" secondAttribute="bottom" constant="8" symbolic="YES" id="ZSe-n8-KK7"/>
+                                    <constraint firstAttribute="bottom" secondItem="k76-PK-2IR" secondAttribute="bottom" constant="117" id="jMO-nM-4gZ"/>
+                                    <constraint firstItem="k76-PK-2IR" firstAttribute="leading" secondItem="qM4-43-HNS" secondAttribute="leadingMargin" id="lDb-Ss-mNI"/>
+                                    <constraint firstAttribute="trailing" secondItem="k76-PK-2IR" secondAttribute="trailing" constant="-2594" id="mfi-PU-8Mb"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9ZS-XT-mrU" firstAttribute="top" secondItem="AI3-gy-WvE" secondAttribute="bottom" constant="533" id="2qf-aR-aHC"/>
-                            <constraint firstItem="Xyy-vg-7KN" firstAttribute="top" secondItem="9ZS-XT-mrU" secondAttribute="bottom" constant="68" id="Vfg-Oz-Omv"/>
-                            <constraint firstItem="qM4-43-HNS" firstAttribute="centerX" secondItem="9ZS-XT-mrU" secondAttribute="centerX" id="lMs-FV-1FC"/>
-                            <constraint firstItem="qM4-43-HNS" firstAttribute="centerY" secondItem="Pwc-kH-2pG" secondAttribute="centerY" id="nup-Ap-ee2"/>
-                            <constraint firstItem="qM4-43-HNS" firstAttribute="top" secondItem="AI3-gy-WvE" secondAttribute="bottom" constant="20" id="odu-Ic-JFq"/>
-                            <constraint firstItem="qM4-43-HNS" firstAttribute="centerX" secondItem="Pwc-kH-2pG" secondAttribute="centerX" id="tYr-ZG-oLy"/>
-                            <constraint firstItem="qM4-43-HNS" firstAttribute="leading" secondItem="Pwc-kH-2pG" secondAttribute="leadingMargin" id="za4-xf-VeH"/>
+                            <constraint firstItem="qM4-43-HNS" firstAttribute="top" secondItem="AI3-gy-WvE" secondAttribute="bottom" constant="20" id="5dF-Vx-uAR"/>
+                            <constraint firstItem="qM4-43-HNS" firstAttribute="centerY" secondItem="Pwc-kH-2pG" secondAttribute="centerY" id="Dx2-gp-INp"/>
+                            <constraint firstItem="qM4-43-HNS" firstAttribute="leading" secondItem="Pwc-kH-2pG" secondAttribute="leadingMargin" id="tcL-sB-pM5"/>
+                            <constraint firstItem="qM4-43-HNS" firstAttribute="trailing" secondItem="Pwc-kH-2pG" secondAttribute="trailingMargin" id="z5M-2U-UG9"/>
                         </constraints>
                     </view>
                     <connections>
