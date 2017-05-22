@@ -53,7 +53,7 @@ class ViewController: UIViewController {
     }
 
 
-
+// Do not allow the placement of game pieces once there is a win or a draw.
 
     
 }
