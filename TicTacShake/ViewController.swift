@@ -10,14 +10,38 @@ import UIKit
 
 class ViewController: UIViewController {
  
+    var activePlayer = 1 // "X"
     
+    var gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    
+//    let winningCombinations = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
+    
+//    var gameIsActive = true
+    
+    
+    // Scratch is a term applied to tic tac toe in that it is called a cats game.
+    
+    @IBAction func scratchAction(_ sender: AnyObject) {
+        if (gameState[sender.tag-1] == 0) {
+            gameState[sender.tag-1] = activePlayer
+        if (activePlayer == 1) {
+            sender.setImage(UIImage(named: "LimeEx.png"), for: UIControlState())
+            activePlayer = 2
+        } else {
+            sender.setImage(UIImage(named: "LimeOh.png"), for: UIControlState())
+            activePlayer = 1
+        }
+    }
+}
+
+    /*
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if event?.subtype == UIEventSubtype.motionShake {
             print ("SHAKE")
         }
     }
-    
+    */
     
     @IBAction func goToGameInstructions(_ sender: Any) {
         
@@ -32,9 +56,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var ScoreLabel: UILabel!
     
     @IBOutlet weak var PlayAgainButton: UIButton!
-    
-    
-    
+        
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +79,7 @@ class ViewController: UIViewController {
 
     
 }
+
 
         /*
     
