@@ -14,9 +14,24 @@ class ViewController: UIViewController {
     
     var gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     
-//    let winningCombinations = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
+    let winningCombinations = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
     
-//    var gameIsActive = true
+    var gameIsActive = true
+    
+    
+    @IBOutlet weak var playerName: UITextField!
+    
+    @IBOutlet weak var opponentName: UITextField!
+    
+    @IBOutlet weak var scoreLabel: UILabel!
+
+    @IBOutlet weak var playAgainButton: UIButton!
+    
+    @IBOutlet weak var outcomeLabel: UILabel!
+    
+    @IBOutlet weak var goToGameInstructions: UIButton!
+    
+ 
     
     
     // Scratch is a term applied to tic tac toe in that it is called a cats game.
@@ -31,9 +46,30 @@ class ViewController: UIViewController {
             sender.setImage(UIImage(named: "LimeOh.png"), for: UIControlState())
             activePlayer = 1
         }
-    }
-}
-
+            
+            
+            for combination in winningCombinations
+            {
+                if gameState[combination[0]] != 0 && gameState[combination[0]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]]
+                {
+                    gameIsActive = false
+                    
+                    if gameState[combination[0]] == 1 {
+                        
+                        outcomeLabel.text = "X Won!"
+                        
+                    } else {
+                        outcomeLabel.text = "O Won!"
+                    }
+                    
+                    playAgainButton.isHidden = false;
+                    outcomeLabel.isHidden = false
+                    
+                    break
+                }
+            }
+        }
+        
     /*
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
@@ -43,28 +79,17 @@ class ViewController: UIViewController {
     }
     */
     
-    @IBAction func goToGameInstructions(_ sender: Any) {
-        
-    }
-    
-    @IBOutlet weak var PlayerName: UITextField!
-    
-    @IBOutlet weak var OpponentName: UITextField!
     
     
-    
-    @IBOutlet weak var ScoreLabel: UILabel!
-    
-    @IBOutlet weak var PlayAgainButton: UIButton!
         
 
-    override func viewDidLoad() {
+    func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
     
     //Close iOS Keyboard by touching anywhere using Swift
-
+/*
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view, typically from a nib.
@@ -76,7 +101,7 @@ class ViewController: UIViewController {
 
 
 // Do not allow the placement of game pieces once there is a win or a draw.
-
+*/
     
 }
 
@@ -86,12 +111,6 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         createAlert(title: "How to Play", message: "Click to place your game piece. Shake device to place your opponents game piece.")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     
 
     func createAlert (title:String, message:String) {
@@ -126,3 +145,4 @@ class ViewController: UIViewController {
 
 
 */*/
+}

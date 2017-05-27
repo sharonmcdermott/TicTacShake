@@ -46,7 +46,6 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="46"/>
                                                         <state key="normal" title="ℹ️"/>
                                                         <connections>
-                                                            <action selector="goToGameInstructions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BBj-Yl-VmQ"/>
                                                             <segue destination="zRa-s9-8Ml" kind="presentation" id="qUs-Qg-FEy"/>
                                                         </connections>
                                                     </button>
@@ -272,9 +271,7 @@
                                                                             <constraint firstAttribute="height" constant="55" id="Ufi-ZR-ZCv"/>
                                                                             <constraint firstAttribute="width" constant="55" id="fld-Zc-vNo"/>
                                                                         </constraints>
-                                                                        <state key="normal" title="Button">
-                                                                            <color key="titleColor" red="0.99831074476242065" green="0.91525024175643921" blue="0.80176621675491333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        </state>
+                                                                        <state key="normal" title="Button"/>
                                                                         <connections>
                                                                             <action selector="scratchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f1c-gf-Wdk"/>
                                                                         </connections>
@@ -390,9 +387,12 @@
                     </view>
                     <connections>
                         <outlet property="OpponentName" destination="qbr-QJ-Zlj" id="pKo-Pg-3L7"/>
-                        <outlet property="PlayAgainButton" destination="maq-KZ-atH" id="fXr-6G-pze"/>
-                        <outlet property="PlayerName" destination="yjN-bY-I9Z" id="FTW-aC-PnB"/>
-                        <outlet property="ScoreLabel" destination="FuR-Qa-IfE" id="hMw-6m-WVF"/>
+                        <outlet property="goToGameInstructions" destination="S34-Yp-8hc" id="fOx-bF-ICg"/>
+                        <outlet property="opponentName" destination="qbr-QJ-Zlj" id="wrJ-by-Ft4"/>
+                        <outlet property="outcomeLabel" destination="4Bb-Ty-vQI" id="Pmg-8S-whA"/>
+                        <outlet property="playAgainButton" destination="maq-KZ-atH" id="JrF-Kp-eMI"/>
+                        <outlet property="playerName" destination="yjN-bY-I9Z" id="eRW-b4-mkL"/>
+                        <outlet property="scoreLabel" destination="FuR-Qa-IfE" id="TCZ-K7-Ozx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
