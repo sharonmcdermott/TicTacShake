@@ -48,8 +48,7 @@ class ViewController: UIViewController {
         }
             
             
-            for combination in winningCombinations
-            {
+            for combination in winningCombinations {
                 if gameState[combination[0]] != 0 && gameState[combination[0]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]]
                 {
                     gameIsActive = false
@@ -97,11 +96,11 @@ class ViewController: UIViewController {
     func dismissKeyboard() {
         //Causes the view (or one of it's embedded text fields) to resign the first responder status.
         view.endEditing(true)
+         */
     }
 
 
 // Do not allow the placement of game pieces once there is a win or a draw.
-*/
     
 }
 
