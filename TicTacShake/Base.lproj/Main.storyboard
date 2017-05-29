@@ -271,7 +271,9 @@
                                                                             <constraint firstAttribute="height" constant="55" id="Ufi-ZR-ZCv"/>
                                                                             <constraint firstAttribute="width" constant="55" id="fld-Zc-vNo"/>
                                                                         </constraints>
-                                                                        <state key="normal" title="Button"/>
+                                                                        <state key="normal" title="Button">
+                                                                            <color key="titleColor" red="0.99831074480000004" green="0.91525024180000003" blue="0.80176621680000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </state>
                                                                         <connections>
                                                                             <action selector="scratchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f1c-gf-Wdk"/>
                                                                         </connections>
