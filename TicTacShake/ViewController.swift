@@ -76,7 +76,8 @@ class ViewController: UIViewController {
             print ("SHAKE")
         }
     }
-    */
+
+         */
     
     
     
@@ -86,17 +87,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-    
+
     //Close iOS Keyboard by touching anywhere using Swift
-/*
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    func dismissKeyboard() {
-        //Causes the view (or one of it's embedded text fields) to resign the first responder status.
-        view.endEditing(true)
-         */
+    /*
+     let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+     view.addGestureRecognizer(tap)
+     // Do any additional setup after loading the view, typically from a nib.
+     }
+     func dismissKeyboard() {
+     //Causes the view (or one of it's embedded text fields) to resign the first responder status.
+     view.endEditing(true)
+     */
+        
     }
 
 
