@@ -24,8 +24,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var opponentName: UITextField!
     
     @IBOutlet weak var scoreLabel: UILabel!
+    
 
     @IBOutlet weak var playAgainButton: UIButton!
+    
+    @IBAction func playAgain(_ sender: Any) {
+        gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    }
+    
     
     @IBOutlet weak var outcomeLabel: UILabel!
     
@@ -68,6 +74,10 @@ class ViewController: UIViewController {
                 }
             }
         }
+        
+        
+
+        
         
     /*
     

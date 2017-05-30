@@ -351,6 +351,9 @@
                                                                 <state key="normal" title="Play Again">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dOT-h9-YuT"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -392,7 +395,7 @@
                         <outlet property="goToGameInstructions" destination="S34-Yp-8hc" id="fOx-bF-ICg"/>
                         <outlet property="opponentName" destination="qbr-QJ-Zlj" id="wrJ-by-Ft4"/>
                         <outlet property="outcomeLabel" destination="4Bb-Ty-vQI" id="Pmg-8S-whA"/>
-                        <outlet property="playAgainButton" destination="maq-KZ-atH" id="JrF-Kp-eMI"/>
+                        <outlet property="playAgainButton" destination="maq-KZ-atH" id="1Ie-FV-EFw"/>
                         <outlet property="playerName" destination="yjN-bY-I9Z" id="eRW-b4-mkL"/>
                         <outlet property="scoreLabel" destination="FuR-Qa-IfE" id="TCZ-K7-Ozx"/>
                     </connections>
