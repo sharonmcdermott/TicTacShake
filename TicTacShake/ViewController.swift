@@ -8,23 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
- 
-    var activePlayer = 1 // "X"
+class ViewController : UIViewController {
     
-    var gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-    
-    let winningCombinations = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
-    
-    var gameIsActive = true
-    
-    
+    /// Player name textfield.
     @IBOutlet weak var playerName: UITextField!
     
     @IBOutlet weak var opponentName: UITextField!
     
     @IBOutlet weak var scoreLabel: UILabel!
-    
 
     @IBOutlet weak var playAgainButton: UIButton!
     
@@ -32,89 +23,100 @@ class ViewController: UIViewController {
         gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     }
     
-    
     @IBOutlet weak var outcomeLabel: UILabel!
     
     @IBOutlet weak var goToGameInstructions: UIButton!
     
- 
-    
-    
     // Scratch is a term applied to tic tac toe in that it is called a cats game.
     
     @IBAction func scratchAction(_ sender: AnyObject) {
+        
         if (gameState[sender.tag-1] == 0) {
+            
             gameState[sender.tag-1] = activePlayer
-        if (activePlayer == 1) {
-            sender.setImage(UIImage(named: "LimeEx.png"), for: UIControlState())
-            activePlayer = 2
-        } else {
-            sender.setImage(UIImage(named: "LimeOh.png"), for: UIControlState())
-            activePlayer = 1
-        }
+            if (activePlayer == 1) {
+                sender.setImage(UIImage(named: "LimeEx.png"), for: UIControlState())
+                activePlayer = 2
+            } else {
+                sender.setImage(UIImage(named: "LimeOh.png"), for: UIControlState())
+                activePlayer = 1
+            }
             
+            moveCount += 1
             
+            var isDraw = true
             for combination in winningCombinations {
-                if gameState[combination[0]] != 0 && gameState[combination[0]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]]
-                {
+                
+                if gameState[combination[0]] != 0 &&
+                    gameState[combination[0]] == gameState[combination[1]] &&
+                    gameState[combination[1]] == gameState[combination[2]] {
+                    
+                    isDraw = false
                     gameIsActive = false
-                    
-                    if gameState[combination[0]] == 1 {
-                        
-                        outcomeLabel.text = "X Won!"
-                        
-                    } else {
-                        outcomeLabel.text = "O Won!"
-                    }
-                    
-                    playAgainButton.isHidden = false;
+                    playAgainButton.isHidden = false
                     outcomeLabel.isHidden = false
+                    moveCount = 0
+                    
+                    // Ternerary operator!
+                    outcomeLabel.text = (gameState[combination[0]] == 1 ? "X Won!" : "Y Won!")
+                    
+    //                    if gameState[combination[0]] == 1 {
+    //                        
+    //                        outcomeLabel.text = "X Won!"
+    //
+    //                    } else {
+    //                        outcomeLabel.text = "O Won!"
+    //                    }
                     
                     break
+                    
                 }
+                
             }
+            
+            if moveCount >= 9 && isDraw {
+                outcomeLabel.text = "It's a draw!"
+                gameIsActive = false
+                playAgainButton.isHidden = false
+                outcomeLabel.isHidden = false
+                moveCount = 0
+            }
+        
         }
         
-        
-
-        
-        
-    /*
-    
-    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
-        if event?.subtype == UIEventSubtype.motionShake {
-            print ("SHAKE")
-        }
     }
 
-         */
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if event?.subtype == UIEventSubtype.motionShake {
+            didRecognizeShake()
+        }
+    }
     
-    
-    
+    override func viewDidLoad() {
         
-
-    func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-
-    //Close iOS Keyboard by touching anywhere using Swift
-    /*
-     let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
-     view.addGestureRecognizer(tap)
-     // Do any additional setup after loading the view, typically from a nib.
-     }
-     func dismissKeyboard() {
-     //Causes the view (or one of it's embedded text fields) to resign the first responder status.
-     view.endEditing(true)
-     */
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard(_ :)))
+        view.addGestureRecognizer(tap)
         
+     }
+    
+    
+    func dismissKeyboard(_ gesture: UITapGestureRecognizer) {
+     //Causes the view (or one of it's embedded text fields) to resign the first responder status.
+        if gesture.state == .ended {
+            view.endEditing(true)
+        }
     }
 
+    // option + R = refactor
+    fileprivate func didRecognizeShake() {
+        
+    }
+    
 
 // Do not allow the placement of game pieces once there is a win or a draw.
-    
-}
 
 
         /*
