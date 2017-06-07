@@ -52,47 +52,51 @@ class ViewController : UIViewController {
                     gameState[combination[1]] == gameState[combination[2]] {
                     
                     isDraw = false
-                    gameIsActive = false
+                    
                     playAgainButton.isHidden = false
                     outcomeLabel.isHidden = false
+                    outcomeLabel.text = "It's a draw!"
+                    gameIsActive = false
                     moveCount = 0
                     
                     // Ternerary operator!
-                    outcomeLabel.text = (gameState[combination[0]] == 1 ? "X Won!" : "Y Won!")
+                    outcomeLabel.text = (gameState[combination[0]] == 1 ? "X Won!" : "O Won!")
                     
-    //                    if gameState[combination[0]] == 1 {
-    //                        
-    //                        outcomeLabel.text = "X Won!"
-    //
-    //                    } else {
-    //                        outcomeLabel.text = "O Won!"
-    //                    }
+                        if gameState[combination[0]] == 1 {
+                            
+                            outcomeLabel.text = "X Won!"
+    
+                        } else if gameState[combination[1]] == 2 {
+                            outcomeLabel.text = "O Won!"
+                            
+                        } else {
+                            if moveCount >= 9 && isDraw {
                     
-                    break
+                            outcomeLabel.text = "It's a draw!"
+                            gameIsActive = false
+                            playAgainButton.isHidden = false
+                            outcomeLabel.isHidden = false
+                            moveCount = 0
                     
                 }
                 
-            }
-            
-            if moveCount >= 9 && isDraw {
-                outcomeLabel.text = "It's a draw!"
-                gameIsActive = false
-                playAgainButton.isHidden = false
-                outcomeLabel.isHidden = false
-                moveCount = 0
             }
         
         }
         
     }
+            
+/*
 
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if event?.subtype == UIEventSubtype.motionShake {
             didRecognizeShake()
         }
     }
-    
-    override func viewDidLoad() {
+ 
+ */
+ 
+//    override func viewDidLoad() {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -101,6 +105,7 @@ class ViewController : UIViewController {
         view.addGestureRecognizer(tap)
         
      }
+}
     
     
     func dismissKeyboard(_ gesture: UITapGestureRecognizer) {
@@ -110,34 +115,9 @@ class ViewController : UIViewController {
         }
     }
 
-    // option + R = refactor
-    fileprivate func didRecognizeShake() {
-        
-    }
-    
 
 // Do not allow the placement of game pieces once there is a win or a draw.
 
-
-        /*
-    
-    override func viewDidAppear(_ animated: Bool) {
-        createAlert(title: "How to Play", message: "Click to place your game piece. Shake device to place your opponents game piece.")
-    }
-    
-
-    func createAlert (title:String, message:String) {
-        
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        
-        // Creating One Button
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
-            alert.dismiss(animated: true, completion: nil)
-        }))
-            alert.present(alert, animated: true, completion: nil)
-}
-
- /*
 
 
 
@@ -157,5 +137,4 @@ class ViewController : UIViewController {
 
 
 
-*/*/
 }

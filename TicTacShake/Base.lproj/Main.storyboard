@@ -303,7 +303,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igv-oT-c0m">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="106.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X  Won!" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.12" translatesAutoresizingMaskIntoConstraints="NO" id="4Bb-Ty-vQI">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.12" translatesAutoresizingMaskIntoConstraints="NO" id="4Bb-Ty-vQI">
                                                         <rect key="frame" x="0.0" y="46.5" width="375" height="60"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="v7s-iG-phy"/>
