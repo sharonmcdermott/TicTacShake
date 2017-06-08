@@ -58,6 +58,19 @@ class ViewController : UIViewController {
                 outcomeLabel.isHidden = false
             }
         }
+        gameIsActive = false
+        
+        for i in gameState {
+            if i == 0 {
+                gameIsActive = true
+                break
+            }
+        }
+        if gameIsActive == false {
+            outcomeLabel.text = "It was a draw"
+            outcomeLabel.isHidden = false
+            playAgainButton.isHidden = false
+        }
     }
         
     @IBOutlet weak var playAgainButton: UIButton!
