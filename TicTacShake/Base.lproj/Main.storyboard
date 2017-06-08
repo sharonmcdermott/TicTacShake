@@ -399,6 +399,18 @@
                         <outlet property="playerName" destination="yjN-bY-I9Z" id="eRW-b4-mkL"/>
                     </connections>
                 </viewController>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6MN-zG-JEY" userLabel="Play Again Button">
+                    <rect key="frame" x="0.0" y="0.0" width="175" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.0042739007620000002" green="0.71681296829999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                    <state key="normal" title="Play Again">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nps-SX-3JK"/>
+                    </connections>
+                </button>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="112.8" y="122.78860569715144"/>
