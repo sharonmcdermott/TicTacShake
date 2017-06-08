@@ -54,12 +54,27 @@ class ViewController : UIViewController {
                     print ("O has won !")
                     outcomeLabel.text = "O has won ***"
                 }
+                playAgainButton.isHidden = false
+                outcomeLabel.isHidden = false
             }
         }
     }
         
+    @IBOutlet weak var playAgainButton: UIButton!
+    @IBAction func playAgain(_ sender: Any) {
+        gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+        gameIsActive = true
+        activePlayer = 1
+        playAgainButton.isHidden = true
+        outcomeLabel.isHidden = true
         
-            
+        for i in 1...9 {
+            let button = view.viewWithTag(i) as! UIButton
+            button.setImage(UIImage(named: ""), for: UIControlState())
+        }
+    }
+        
+    
 /*
             moveCount += 1
             

@@ -303,7 +303,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igv-oT-c0m">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="106.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.12" translatesAutoresizingMaskIntoConstraints="NO" id="4Bb-Ty-vQI">
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.12" translatesAutoresizingMaskIntoConstraints="NO" id="4Bb-Ty-vQI">
                                                         <rect key="frame" x="0.0" y="46.5" width="375" height="60"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="v7s-iG-phy"/>
@@ -344,13 +344,16 @@
                                                                     <constraint firstItem="FuR-Qa-IfE" firstAttribute="leading" secondItem="hlk-Qx-11b" secondAttribute="leading" id="sIc-xo-PlZ"/>
                                                                 </constraints>
                                                             </view>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maq-KZ-atH" userLabel="Play Again Button">
+                                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maq-KZ-atH" userLabel="Play Again Button">
                                                                 <rect key="frame" x="181" y="0.0" width="175" height="60"/>
                                                                 <color key="backgroundColor" red="0.0042739007620000002" green="0.71681296829999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                                                 <state key="normal" title="Play Again">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Elz-Jo-5zP"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -392,6 +395,7 @@
                         <outlet property="goToGameInstructions" destination="S34-Yp-8hc" id="fOx-bF-ICg"/>
                         <outlet property="opponentName" destination="qbr-QJ-Zlj" id="wrJ-by-Ft4"/>
                         <outlet property="outcomeLabel" destination="4Bb-Ty-vQI" id="Pmg-8S-whA"/>
+                        <outlet property="playAgainButton" destination="maq-KZ-atH" id="eFK-Fe-GWa"/>
                         <outlet property="playerName" destination="yjN-bY-I9Z" id="eRW-b4-mkL"/>
                     </connections>
                 </viewController>
