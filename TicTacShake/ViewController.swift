@@ -27,10 +27,10 @@ class ViewController : UIViewController {
     
     @IBOutlet weak var goToGameInstructions: UIButton!
     
-    // Scratch is a term applied to tic tac toe in that it is called a cats game.
+    // Scratch is a term applied to tic tac toe when a player places a gmae piece.
     
     @IBAction func scratchAction(_ sender: AnyObject) {
-        
+        /// It is -1 because tags start at 1 and we have an array that starts at 0.
         if (gameState[sender.tag-1] == 0) {
             
             gameState[sender.tag-1] = activePlayer
@@ -42,6 +42,28 @@ class ViewController : UIViewController {
                 activePlayer = 1
             }
             
+        }
+        
+        for combination in winningCombinations {
+            if gameState[combination[0]] != 0 &&
+                gameState[combination[0]] == gameState[combination[1]] &&
+                gameState[combination[1]] == gameState[combination[2]]{
+                
+                gameIsActive = false
+                
+                if gameState[combination[0]] == 1 {
+                    //Cross has won.
+                    print ("X has won !")
+                    outcomeLabel.text = "X has won ***"
+                } else {
+                    //Not has won.
+                    print ("O has won !")
+                    outcomeLabel.text = "O has won ***"
+                }
+            }
+        }
+            
+/*
             moveCount += 1
             
             var isDraw = true
@@ -50,13 +72,13 @@ class ViewController : UIViewController {
                 if gameState[combination[0]] != 0 &&
                     gameState[combination[0]] == gameState[combination[1]] &&
                     gameState[combination[1]] == gameState[combination[2]] {
-                    
+                    gameIsActive = false
                     isDraw = false
-                    
+                    outcomeLabel.text = "It's a draw!***"
                     playAgainButton.isHidden = false
                     outcomeLabel.isHidden = false
-                    outcomeLabel.text = "It's a draw!"
-                    gameIsActive = false
+                    outcomeLabel.text = "It's a draw!***"
+             
                     moveCount = 0
                     
                     // Ternerary operator!
@@ -72,10 +94,10 @@ class ViewController : UIViewController {
                         } else {
                             if moveCount >= 9 && isDraw {
                     
-                            outcomeLabel.text = "It's a draw!"
                             gameIsActive = false
                             playAgainButton.isHidden = false
                             outcomeLabel.isHidden = false
+                            outcomeLabel.text = "It's a draw!"
                             moveCount = 0
                     
                 }
@@ -85,6 +107,9 @@ class ViewController : UIViewController {
         }
         
     }
+ 
+ */
+ 
             
 /*
 
@@ -96,7 +121,7 @@ class ViewController : UIViewController {
  
  */
  
-//    override func viewDidLoad() {
+    func viewDidLoad() {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -132,6 +157,7 @@ class ViewController : UIViewController {
 // you may want to delv deeper and use protocols and structs
 
 // How do I define the board?
+
 
 
 
