@@ -14,15 +14,7 @@ class ViewController : UIViewController {
     @IBOutlet weak var playerName: UITextField!
     
     @IBOutlet weak var opponentName: UITextField!
-    
-    @IBOutlet weak var scoreLabel: UILabel!
-
-    @IBOutlet weak var playAgainButton: UIButton!
-    
-    @IBAction func playAgain(_ sender: Any) {
-        gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-    }
-    
+ 
     @IBOutlet weak var outcomeLabel: UILabel!
     
     @IBOutlet weak var goToGameInstructions: UIButton!
@@ -31,7 +23,7 @@ class ViewController : UIViewController {
     
     @IBAction func scratchAction(_ sender: AnyObject) {
         /// It is -1 because tags start at 1 and we have an array that starts at 0.
-        if (gameState[sender.tag-1] == 0) {
+        if (gameState[sender.tag-1] == 0 && gameIsActive == true) {
             
             gameState[sender.tag-1] = activePlayer
             if (activePlayer == 1) {
@@ -46,8 +38,10 @@ class ViewController : UIViewController {
         
         for combination in winningCombinations {
             if gameState[combination[0]] != 0 &&
-                gameState[combination[0]] == gameState[combination[1]] &&
-                gameState[combination[1]] == gameState[combination[2]]{
+                gameState[combination[0]] ==
+                gameState[combination[1]] &&
+                gameState[combination[1]] ==
+                gameState[combination[2]]{
                 
                 gameIsActive = false
                 
@@ -62,6 +56,9 @@ class ViewController : UIViewController {
                 }
             }
         }
+    }
+        
+        
             
 /*
             moveCount += 1
@@ -110,6 +107,12 @@ class ViewController : UIViewController {
  
  */
  
+        
+        
+        
+        
+        
+        
             
 /*
 
@@ -121,8 +124,7 @@ class ViewController : UIViewController {
  
  */
  
-    func viewDidLoad() {
-        
+    override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
@@ -130,7 +132,7 @@ class ViewController : UIViewController {
         view.addGestureRecognizer(tap)
         
      }
-}
+
     
     
     func dismissKeyboard(_ gesture: UITapGestureRecognizer) {
@@ -157,6 +159,7 @@ class ViewController : UIViewController {
 // you may want to delv deeper and use protocols and structs
 
 // How do I define the board?
+
 
 
 

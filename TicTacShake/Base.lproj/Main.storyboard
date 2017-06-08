@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -351,9 +351,6 @@
                                                                 <state key="normal" title="Play Again">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
-                                                                <connections>
-                                                                    <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dOT-h9-YuT"/>
-                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -395,9 +392,7 @@
                         <outlet property="goToGameInstructions" destination="S34-Yp-8hc" id="fOx-bF-ICg"/>
                         <outlet property="opponentName" destination="qbr-QJ-Zlj" id="wrJ-by-Ft4"/>
                         <outlet property="outcomeLabel" destination="4Bb-Ty-vQI" id="Pmg-8S-whA"/>
-                        <outlet property="playAgainButton" destination="maq-KZ-atH" id="1Ie-FV-EFw"/>
                         <outlet property="playerName" destination="yjN-bY-I9Z" id="eRW-b4-mkL"/>
-                        <outlet property="scoreLabel" destination="FuR-Qa-IfE" id="TCZ-K7-Ozx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
