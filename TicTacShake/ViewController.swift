@@ -48,11 +48,11 @@ class ViewController : UIViewController {
                 if gameState[combination[0]] == 1 {
                     //Cross has won.
                     print ("X has won !")
-                    outcomeLabel.text = "X has won ***"
+                    outcomeLabel.text = "X has won!"
                 } else {
                     //Not has won.
                     print ("O has won !")
-                    outcomeLabel.text = "O has won ***"
+                    outcomeLabel.text = "O has won!"
                 }
                 playAgainButton.isHidden = false
                 outcomeLabel.isHidden = false
@@ -67,7 +67,7 @@ class ViewController : UIViewController {
             }
         }
         if gameIsActive == false {
-            outcomeLabel.text = "It was a draw"
+            outcomeLabel.text = "It was a draw."
             outcomeLabel.isHidden = false
             playAgainButton.isHidden = false
         }
