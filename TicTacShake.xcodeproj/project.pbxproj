@@ -13,6 +13,7 @@
 		805B83A51E92DD9C0038F454 /* TicTacShake.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 805B83A31E92DD9C0038F454 /* TicTacShake.xcdatamodeld */; };
 		805B83A71E92DD9C0038F454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 805B83A61E92DD9C0038F454 /* Assets.xcassets */; };
 		8075BA8B1ED0A9F400541E03 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8075BA8A1ED0A9F400541E03 /* InstructionsViewController.swift */; };
+		8080E6F61EF5A5D800CF93B5 /* TTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8080E6F51EF5A5D800CF93B5 /* TTButton.swift */; };
 		80FC6FCA1EE33C280060AA64 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FC6FC91EE33C280060AA64 /* GlobalVariables.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		805B83A61E92DD9C0038F454 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		805B83AB1E92DD9C0038F454 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8075BA8A1ED0A9F400541E03 /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
+		8080E6F51EF5A5D800CF93B5 /* TTButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTButton.swift; sourceTree = "<group>"; };
 		80FC6FC91EE33C280060AA64 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +64,7 @@
 				805B83A01E92DD9C0038F454 /* Main.storyboard */,
 				80FC6FC91EE33C280060AA64 /* GlobalVariables.swift */,
 				805B839E1E92DD9C0038F454 /* ViewController.swift */,
+				8080E6F51EF5A5D800CF93B5 /* TTButton.swift */,
 				8075BA8A1ED0A9F400541E03 /* InstructionsViewController.swift */,
 				805B83A61E92DD9C0038F454 /* Assets.xcassets */,
 				805B83AB1E92DD9C0038F454 /* Info.plist */,
@@ -145,6 +148,7 @@
 				805B839F1E92DD9C0038F454 /* ViewController.swift in Sources */,
 				805B839D1E92DD9C0038F454 /* AppDelegate.swift in Sources */,
 				8075BA8B1ED0A9F400541E03 /* InstructionsViewController.swift in Sources */,
+				8080E6F61EF5A5D800CF93B5 /* TTButton.swift in Sources */,
 				805B83A51E92DD9C0038F454 /* TicTacShake.xcdatamodeld in Sources */,
 				80FC6FCA1EE33C280060AA64 /* GlobalVariables.swift in Sources */,
 			);

@@ -189,6 +189,157 @@ class ViewController : UIViewController {
 // How do I define the board?
 
 
+    
+    
+    
+    enum SquareState {
+        case Empty
+        case X
+        case Y
+    }
+    
+    enum Player {
+        case Player1
+        case Player2
+    }
+    
+    fileprivate var onePlayer = true
+    
+    /// The current player.
+    fileprivate var currentPlayer: Player = .Player1
+    fileprivate var winner: SquareState = .Empty
+    
+    fileprivate var p1SquareState: SquareState = .X
+    fileprivate var p2SquareState: SquareState = .Y
+    
+    /// Each loc (Model)
+    fileprivate var squareStates: [[SquareState]] = [[.Empty, .Empty, .Empty],
+                                                     [.Empty, .Empty, .Empty],
+                                                     [.Empty, .Empty, .Empty]]
+    fileprivate var moveCount = 0
+    
+    /// Restarts the game.
+    func newGame() {
+        
+        // Decide user/cpu square state
+        // Decide first player
+        moveCount = 0
+        winner = .Empty
+        squareStates = [[.Empty, .Empty, .Empty],
+                        [.Empty, .Empty, .Empty],
+                        [.Empty, .Empty, .Empty]]
+        
+        // Clear board (graphically as well)
+        
+        if currentPlayer == .Player2 {
+            computerTakeTurn()
+        }
+        
+    }
+    
+    @IBAction
+    /// Handles user interaction (Controller)
+    func spotTouched(sender: TTButton) {
+        // Get loc id somehow
+        let row = sender.row
+        let col = sender.col
+        guard
+            winner == .Empty,
+            (onePlayer && currentPlayer == .Player1 || !onePlayer),
+            squareStates[row][col] == .Empty
+            else { return }
+        playerTakeTurn(to: (row, col))
+    }
+    
+    /// Switches the current player and invokes AI if necessary.
+    func switchPlayer() {
+        
+        winner = checkWin()
+        if winner != .Empty {
+            // Output winner and show reset button
+            return
+        }
+        
+        guard moveCount < 9 else { return }
+        
+        if currentPlayer == .Player1 {
+            currentPlayer = .Player2
+            if onePlayer {
+                computerTakeTurn()
+            }
+        } else if currentPlayer == .Player2 {
+            currentPlayer = .Player1
+        }
+        
+    }
+    
+    /// Method is called by the IBAction method triggered when
+    /// the user touches an empty loc and updates the View
+    /// - parameter loc: Integer between 0-8 representing
+    /// the locations of each possible move (left-right top-down)
+    func playerTakeTurn(to loc: (row: Int, col: Int)) {
+        squareStates[loc.row][loc.col] = p1SquareState
+        // Code to animate the user's move
+        moveCount += 1
+        switchPlayer()
+    }
+    
+    /// Computer decides best move and goes.
+    func computerTakeTurn() {
+        //guard currentPlayer == .CPU else { return }
+        var row = 0 // the move decided between 0-8
+        var col = 0
+        squareStates[row][col] = p2SquareState
+        // Animate move
+        moveCount += 1
+        switchPlayer()
+    }
+    
+    func checkWin() -> SquareState {
+        // Rows
+        for rowStates in squareStates {
+            if rowStates == [.X, .X, .X] {
+                return .X
+            } else if rowStates == [.Y, .Y, .Y] {
+                return .Y
+            }
+        }
+        // Cols
+        for i in 0 ..< 3 {
+            var colStates = [SquareState]()
+            for rowStates in squareStates {
+                colStates.append(rowStates[i])
+            }
+            if colStates == [.X, .X, .X] {
+                return .X
+            } else if colStates == [.Y, .Y, .Y] {
+                return .Y
+            }
+        }
+        // TL-BR
+        var aStates = [SquareState]()
+        var bStates = [SquareState]()
+        for rowStates in squareStates {
+            for i in 0 ..< 3 {
+                aStates.append(rowStates[i])
+                bStates.append(rowStates[2-i])
+            }
+        }
+        if aStates == [.X, .X, .X] {
+            return .X
+        } else if aStates == [.Y, .Y, .Y] {
+            return .Y
+        }
+        // BL-TR
+        if bStates == [.X, .X, .X] {
+            return .X
+        } else if bStates == [.Y, .Y, .Y] {
+            return .Y
+        }
+        return .Empty
+    }
+    
+    
 
 
 
